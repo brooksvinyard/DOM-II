@@ -3,6 +3,7 @@
 
 // 1 - Makes text you click change font
 const containerSelect = document.querySelector('.home');
+
 containerSelect.addEventListener('click', e => {
     e.target.style.fontFamily = "Indie Flower";
 });
@@ -22,6 +23,7 @@ let navigationSelect = document.querySelector('.main-navigation');
 
 navigationSelect.addEventListener('dblclick', e => {
     e.target.style.background =  "#17A2B8";
+    e.target.style.color =  "blue";
 });
 
 // 5/6 - On mouse click / release change the picture drop shadow
@@ -44,7 +46,7 @@ bodySelect.addEventListener('keyup', e => {
     e.target.style.backgroundColor =  "white";
 });
 
-// 9/10 Change footer on mouee enter/ leave
+// 9/10 Change footer on mouse enter/ leave
 const btnSelect = document.querySelector('footer');
 
 btnSelect.addEventListener('mouseenter', e => {
@@ -54,4 +56,23 @@ btnSelect.addEventListener('mouseenter', e => {
 btnSelect.addEventListener('mouseleave', e => {
     e.target.style.padding = "10px";
     e.target.style.backgroundColor =  "#FFEBCD";
+});
+
+
+// Stop Prop
+// before making the change, the whole navbar text would change. now only the porting you double click will change
+let navContainerSelect = document.querySelector('.main-navigation .nav-container');
+
+navContainerSelect.addEventListener('dblclick', e => {
+    e.stopPropagation();
+    e.target.style.background =  "purple";
+    e.target.style.color =  "green";
+});
+
+
+// Prevent Default
+let navLinkSelect = document.querySelector('.nav a');
+
+navContainerSelect.addEventListener('dblclick', e => {
+    e.preventDefault();
 });
