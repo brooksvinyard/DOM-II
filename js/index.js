@@ -43,3 +43,15 @@ bodySelect.addEventListener('keydown', e => {
 bodySelect.addEventListener('keyup', e => {
     e.target.style.backgroundColor =  "white";
 });
+
+// 9/10 Change footer on mouee enter/ leave
+const btnSelect = document.querySelector('footer');
+
+btnSelect.addEventListener('mouseenter', e => {
+    e.target.style.padding = "100px";
+    e.target.style.backgroundColor =  "orange";
+});
+btnSelect.addEventListener('mouseleave', e => {
+    e.target.style.padding = "10px";
+    e.target.style.backgroundColor =  "#FFEBCD";
+});
