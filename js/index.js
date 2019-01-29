@@ -17,4 +17,10 @@ adventureImgSelect.addEventListener('mouseout', e => {
     e.target.style.borderRadius =  "10px";
 });
 
-// 3
+// 3 - Changes navigation background on double click
+let navigationSelect = document.querySelector('.main-navigation');
+
+navigationSelect.addEventListener('dblclick', e => {
+    e.target.style.background =  "#17A2B8";
+});
+
