@@ -26,10 +26,20 @@ navigationSelect.addEventListener('dblclick', e => {
 
 // 5/6 - On mouse click / release change the picture drop shadow
 let funImgSelect = document.querySelector('.inverse-content img');
-console.log(funImgSelect);
+
 funImgSelect.addEventListener('mousedown', e => {
     e.target.style.boxShadow = "1px 1px 20px 10px #212529";
 });
 funImgSelect.addEventListener('mouseup', e => {
     e.target.style.boxShadow = "none";
+});
+
+// 7/8 Change background color on key down / up
+const bodySelect = document.querySelector('body');
+
+bodySelect.addEventListener('keydown', e => {
+    e.target.style.backgroundColor =  "#c0c0c0";
+});
+bodySelect.addEventListener('keyup', e => {
+    e.target.style.backgroundColor =  "white";
 });
